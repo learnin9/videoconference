@@ -28,13 +28,13 @@ perl -pi -e 's/file.reference.commons-logging-1.1.jar=.*$/file.reference.commons
 perl -pi -e 's/file.reference.ws-commons-util-1.0.2.jar=.*$/file.reference.ws-commons-util-1.0.2.jar=\/usr\/share\/java\/ws-commons-util-1.0.1.jar/' medooze/XmlRpcMcuClient/nbproject/project.properties
 perl -pi -e 's/file.reference.xmlrpc-client-3.1.3.jar=.*$/file.reference.xmlrpc-client-3.1.3.jar=\/usr\/share\/java\/xmlrpc-client-3.1.3.jar/' medooze/XmlRpcMcuClient/nbproject/project.properties
 perl -pi -e 's/file.reference.xmlrpc-common-3.1.3.jar=.*$/file.reference.xmlrpc-common-3.1.3.jar=\/usr\/share\/java\/xmlrpc-common-3.1.3.jar/' medooze/XmlRpcMcuClient/nbproject/project.properties
-(cd medooze/XmlRpcMcuClient/;ant)
+(cd medooze/XmlRpcMcuClient/;ant -Dplatforms.JDK_1.6.home=/usr/lib/jvm/default-java)
 
 
 # Get sailfin
 wget -c http://download.java.net/javaee5/sailfin/v2_branch/promoted/Linux/sailfin-installer-v2-b31g-linux.jar
 echo A |java -jar sailfin-installer-v2-b31g-linux.jar
-(cd sailfin;ant -f setup.xml)
+(cd sailfin;ant -Dplatforms.JDK_1.6.home=/usr/lib/jvm/default-java -f setup.xml)
 
 # Compile mcuWeb
 perl -pi -e 's/file.reference.commons-logging-1.1.jar=.*$/file.reference.commons-logging-1.1.jar=\/usr\/share\/java\/commons-logging-1.1.3.jar\r/' medooze/mcuWeb/nbproject/project.properties
@@ -42,7 +42,7 @@ perl -pi -e 's/file.reference.ws-commons-util-1.0.2.jar=.*$/file.reference.ws-co
 perl -pi -e 's/file.reference.xmlrpc-client-3.1.3.jar=.*$/file.reference.xmlrpc-client-3.1.3.jar=\/usr\/share\/java\/xmlrpc-client-3.1.3.jar\r/' medooze/mcuWeb/nbproject/project.properties
 perl -pi -e 's/file.reference.xmlrpc-common-3.1.3.jar=.*$/file.reference.xmlrpc-common-3.1.3.jar=\/usr\/share\/java\/xmlrpc-common-3.1.3.jar\r/' medooze/mcuWeb/nbproject/project.properties
 perl -pi -e 's/file.reference.ssa-api.jar=.*$/file.reference.ssa-api.jar=..\/..\/sailfin\/lib\/ssa-api.jar\r/' medooze/mcuWeb/nbproject/project.properties
-(cd medooze/mcuWeb;ant -Dj2ee.server.home=../../sailfin -Dlibs.CopyLibs.classpath=/usr/share/netbeans/java5/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar)
+(cd medooze/mcuWeb;ant -Dplatforms.JDK_1.6.home=/usr/lib/jvm/default-java -Dj2ee.server.home=../../sailfin -Dlibs.CopyLibs.classpath=/usr/share/netbeans/java5/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar)
 
 
 # Get Mobicents for deployment!
