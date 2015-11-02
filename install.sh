@@ -7,7 +7,7 @@
 ############################
 
 # Get the frontend
-apt-get install git build-essential python-pip python-dev python-django python-django-south python-simplejson yasm
+apt-get install git build-essential python-pip python-dev python-django python-django-south python-simplejson yasm pkg-config
 pip install gevent gevent-websocket
 git clone https://github.com/synnack/videoconference.git
 
