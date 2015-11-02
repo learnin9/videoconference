@@ -102,7 +102,7 @@ apt-get install yasm libgsm1-dev libtool automake autoconf libsrtp-dev libssl-de
 )
 # libvpx / VP8
 (
-	git clone http://git.chromium.org/webm/libvpx.git
+	git clone https://chromium.googlesource.com/webm/libvpx
 	cd libvpx
 	./configure --enable-shared
 	make -j20
