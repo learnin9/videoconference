@@ -7,7 +7,7 @@
 ############################
 
 # Get the frontend
-apt-get install git build-essential python-pip python-dev python-django python-django-south python-simplejson
+apt-get install git build-essential python-pip python-dev python-django python-django-south python-simplejson yasm
 pip install gevent gevent-websocket
 git clone https://github.com/synnack/videoconference.git
 
@@ -68,7 +68,7 @@ apt-get install yasm libgsm1-dev libtool automake autoconf libsrtp-dev libssl-de
 (
 	git clone git://git.videolan.org/x264.git
 	cd x264
-	./configure --enable-debug --enable-shared --enable-pic
+	./configure --enable-debug --enable-shared --enable-pic --disable-asm
 	make -j20
 	make install
 )
