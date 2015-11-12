@@ -23,6 +23,12 @@ svn checkout svn://svn.code.sf.net/p/mcumediaserver/code/trunk/ medooze
 
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/
 
+# Get apachexmlrpc
+cd /usr/local
+wget http://archive.apache.org/dist/ws/xmlrpc/binaries/apache-xmlrpc-3.1.3-bin.zip
+apt-get -y install unzip
+unzip apache-xmlrpc-3.1.3-bin.zip
+
 # Compile XmlRpcMcuClient
 perl -pi -e 's/file.reference.commons-logging-1.1.jar=.*$/file.reference.commons-logging-1.1.jar=\/usr\/share\/java\/commons-logging-1.1.3.jar/' medooze/XmlRpcMcuClient/nbproject/project.properties
 perl -pi -e 's/file.reference.ws-commons-util-1.0.2.jar=.*$/file.reference.ws-commons-util-1.0.2.jar=\/usr\/share\/java\/ws-commons-util-1.0.1.jar/' medooze/XmlRpcMcuClient/nbproject/project.properties
