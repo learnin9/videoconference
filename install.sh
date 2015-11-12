@@ -48,7 +48,7 @@ perl -pi -e 's/file.reference.ws-commons-util-1.0.2.jar=.*$/file.reference.ws-co
 perl -pi -e 's/file.reference.xmlrpc-client-3.1.3.jar=.*$/file.reference.xmlrpc-client-3.1.3.jar=\/usr\/share\/java\/xmlrpc-client-3.1.3.jar\r/' medooze/mcuWeb/nbproject/project.properties
 perl -pi -e 's/file.reference.xmlrpc-common-3.1.3.jar=.*$/file.reference.xmlrpc-common-3.1.3.jar=\/usr\/share\/java\/xmlrpc-common-3.1.3.jar\r/' medooze/mcuWeb/nbproject/project.properties
 perl -pi -e 's/file.reference.ssa-api.jar=.*$/file.reference.ssa-api.jar=..\/..\/sailfin\/lib\/ssa-api.jar\r/' medooze/mcuWeb/nbproject/project.properties
-(cd medooze/mcuWeb;ant -Dplatforms.JDK_1.6.home=/usr/lib/jvm/default-java -Dj2ee.server.home=../../sailfin -Dlibs.CopyLibs.classpath=/usr/share/netbeans/java5/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar)
+(cd medooze/mcuWeb;ant -Dplatforms.JDK_1.6.home=/usr/lib/jvm/default-java -Dj2ee.server.home=/usr/local/src/sailfin -Dlibs.CopyLibs.classpath=/usr/share/netbeans/java5/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar)
 
 
 # Get Mobicents for deployment!
