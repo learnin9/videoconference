@@ -54,7 +54,7 @@ perl -pi -e 's/file.reference.ssa-api.jar=.*$/file.reference.ssa-api.jar=..\/..\
 # Get Mobicents for deployment!
 if [ \! -d mss-3.0.0 ]; then
 	apt-get install unzip
-	wget -c https://mobicents.ci.cloudbees.com/job/Mobicents-SipServlets-Release/lastSuccessfulBuild/artifact/mss-3.0.0-SNAPSHOT-jboss-as-7.1.3.Final-1383698249.zip
+	wget -c https://mobicents.ci.cloudbees.com/job/MobicentsSipServlets-Release/lastSuccessfulBuild/artifact/mss-3.1.641-jboss-as-7.2.0.Final.zip
 	unzip mss-3.0.0-SNAPSHOT-jboss-as-7.1.3.Final-1383698249.zip
 	mv mss-3.0.0-SNAPSHOT-jboss-as-7.1.3.Final mss-3.0.0
 fi
